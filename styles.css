@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('img/homepage.png') no-repeat center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 100vh;
+}
+
+
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Ensures space between left and right sections */
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+.last_name{
+    font-size: 24px;
+    color: #1a1a1a;
+}
+
+nav {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    flex-shrink: 0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
