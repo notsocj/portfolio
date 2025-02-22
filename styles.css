@@ -3,86 +3,132 @@ body {
     font-family: 'Poppins', sans-serif;
     background: url('img/homepage.png') no-repeat center center;
     background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    height: 100vh;
+    height: 110vh;
 }
-
-
 
 header {
     background-color: white;
     padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    width: 100%;
+    height: 30px;
 }
 
-.container {
+.navbar {
     display: flex;
-    justify-content: space-between; /* Ensures space between left and right sections */
     align-items: center;
-    max-width: 1100px;
-    margin: auto;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     padding: 0 20px;
 }
 
+
+.name-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    left: 120px; 
+}
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: #1a1a1a;
 }
-.last_name{
+
+.last_name {
     font-size: 24px;
     color: #1a1a1a;
 }
 
+
 nav {
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     justify-content: center;
 }
 
-.logo-container {
+.nav-links {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 8px;
-    flex-shrink: 0; /* Prevents shrinking */
-}
-nav ul {
     list-style: none;
+    gap: 25px;
     padding: 0;
     margin: 0;
-    display: flex;
-    gap: 25px;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
+.nav-links li a {
     color: #1a1a1a;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #007bff;
 }
+
 
 .cta-button {
     background-color: #007bff;
     color: white;
-    flex-shrink: 0;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border-radius: 25px;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+    position: absolute;
+    right: 120px; 
 }
 
 .cta-button:hover {
     background-color: #0056b3;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70vh;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.intro-content {
+    max-width: 500px; 
+}
+
+.intro h3 {
+    font-size: 35px;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 2px; 
+}
+
+.intro h1 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    color: #0d1330;
+    line-height: 1.1; 
+    margin-bottom: 8px; 
+}
+
+.intro .bold {
+    font-weight: 800;
+}
+
+.intro p {
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.3; 
+    margin-top: 5px;
 }
