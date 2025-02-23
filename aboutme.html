@@ -1,54 +1,70 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-
-    <link rel="stylesheet" href="aboutmestyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me | Cj Sacdalan</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <div class="navbar">
-            <div class="name-container">
-                <div class="logo">Caleb John</div>
-                <div class="last_name">Sacdalan</div>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
-                    <li><a href="#">My Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="cta-button">Work With Me</a>
+<body class="bg-neutral-800 text-white">
+
+    <!-- Particles.js Background -->
+    <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+    <!-- Navigation Bar (Same as Homepage) -->
+    <nav class="relative mt-7 w-full z-50 bg-transparent px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-white text-lg font-bold flex items-center">
+            <img src="img/CJlogo.png" alt="Logo" class="h-20 ml-72"> 
+        </a>
+        <ul class="flex space-x-6 mr-56">
+            <li><a href="aboutme.html" class="bg-white text-black px-4 py-2 rounded-lg font-semibold transition duration-300 hover:bg-gray-300">ABOUT ME</a></li>
+            <li><a href="techstack.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">TECH STACK</a></li>
+            <li><a href="#projects" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">PROJECTS</a></li>
+            <li><a href="#connect"  class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 ease-in-out transform hover:scale-110 hover:bg-blue-500">CONNECT</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <div class="flex flex-col items-center justify-center h-screen text-center relative z-10 mt-40">
+        
+        <!-- Profile Picture (Optional) -->
+        <img src="img/mainImg.jpeg" alt="Profile Picture" 
+            class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6">
+
+        <!-- Title -->
+        <h1 class="text-4xl md:text-6xl font-bold uppercase tracking-wide" style="font-family: 'Inter', sans-serif; ">
+            About <span class="text-blue-500">Me</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="text-lg md:text-xl max-w-2xl mt-8 text-gray-300 text-center leading-relaxed tracking-wide" style="font-family: 'Inter', sans-serif;">
+            I am a passionate Information Technology student with a strong love for coding and problem-solving. Technology has always fascinated me, especially how software can shape the way people interact with the digital world. My journey into programming began with curiosity and has since grown into a dedication to building functional and efficient applications. I enjoy learning new technologies, tackling challenges, and continuously improving my skills. Whether it's writing clean code, debugging complex issues, or creating innovative solutions, I thrive in the process of bringing ideas to life.
+        </p>
+        <p class="text-lg md:text-xl max-w-2xl mt-6 text-gray-300 text-center leading-relaxed tracking-wide" style="font-family: 'Inter', sans-serif;">
+            I am currently pursuing my Bachelor of Science in Information Technology, with the goal of becoming a mobile application developer. My aspiration is to develop user-friendly, high-performance apps that solve real-world problems and enhance daily experiences. I am particularly interested in cross-platform development, ensuring accessibility across different devices. As I continue my studies, I am committed to expanding my knowledge in software engineering, UI/UX design, and emerging mobile technologies to become a well-rounded developer.
+        </p>
+
+        <!-- Skills Section -->
+        <div class="mt-6 flex flex-wrap gap-6 justify-center py-16 pb-24">
+            <span class="px-6 py-3 bg-blue-500 text-black rounded-lg text-lg font-bold shadow-lg" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">Web Development</span>
+            <span class="px-6 py-3 bg-gray-800 text-white rounded-lg text-lg font-bold shadow-lg" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">Mobile App Development</span>
+            <span class="px-6 py-3 bg-gray-700 text-white rounded-lg text-lg font-bold shadow-lg" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">UI/UX Design</span>
         </div>
-    </header>
-    <body class="aboutme">
-        <section class="aboutmesec">
-            <div class="aboutme-content">
-                <h1>A little About me</h1>
-                <h2>Hi, I'm Caleb John Sacdalan,</h2>
-                <p>a passionate Information Technology student with a love for coding and problem-solving. I'm currently pursuing my Bachelor of Science in Information Technology and aspiring to become a mobile application developer.</p>
-                <h2>What I’m Good At:</h2>
-                <ul>
-                    <li>• Coding: Java, Python, Kotlin, Dart, C, C++ , JavaScript</li>
-                    <li>• Problem-Solving</li>
-                    <li>• Mobile App Development (Aspiring): Android, iOS</li>
-                    <li>• Relevant Skills from Studies: Data Structures, Algorithms</li>
-                    <li>• Soft Skills: Communication, Collaboration</li>
-                    <li>• Project Management</li>
-                    <li>• UI/UX Design</li>
-                </ul>
-            </div>
-        </section>
-    </body>
-    
+    </div>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
