@@ -1,3 +1,59 @@
+@media (max-width: 1024px) {
+    nav {
+        position: relative;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+    }
+    
+    .menu-toggle div {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    #mobile-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 50; /* Ensure it appears above other elements */
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        z-index: 99;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+}
+
+/* Hide menu button on larger screens */
+@media (min-width: 1025px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
+    <title>Cj Sacdalan</title>
 
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,35 +19,49 @@
     <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
 
     <!-- Navigation Bar -->
-    <nav class="fixed mt-7 top-0 left-0 w-full z-50 bg-transparent px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-white text-lg font-bold flex items-center">
-            <img src="img/CJlogo.png" alt="Logo" class="h-20 ml-72"> 
+    <nav class="relative z-50 bg-transparent px-6 py-4 flex items-center justify-between lg:justify-center">
+        <!-- Logo (Left on Mobile, Slightly Centered on Desktop) -->
+        <a href="index.html" class="text-white text-lg font-bold flex items-center lg:mr-16">
+            <img src="img/CJlogo.png" alt="Logo" class="h-14 md:h-20"> 
         </a>
-        <ul class="flex space-x-6 mr-56">
+    
+        <!-- Navigation Links (Centered on Large Screens) -->
+        <ul id="nav-menu" class="hidden lg:flex space-x-8">
             <li><a href="aboutme.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">ABOUT ME</a></li>
             <li><a href="techstack.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">TECH STACK</a></li>
             <li><a href="#projects" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">PROJECTS</a></li>
-            <li><a href="#conect" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-blue-500 hover:text-white">CONNECT</a></li>
+            <li><a href="#connect" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-blue-500">CONNECT</a></li>
         </ul>
+    
+        <!-- Hamburger Menu Button (Visible on Mobile) -->
+        <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
+            <div class="w-6 h-1 bg-white"></div>
+            <div class="w-6 h-1 bg-white"></div>
+            <div class="w-6 h-1 bg-white"></div>
+        </button>
     </nav>
+    
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-neutral-800 bg-opacity-50 p-6 text-center lg:hidden mb-10">
+        <li class="py-2"><a href="aboutme.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">ABOUT ME</a></li>
+        <li class="py-2"><a href="techstack.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">TECH STACK</a></li>
+        <li class="py-2"><a href="#projects" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">PROJECTS</a></li>
+        <li class="py-2"><a href="#connect" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">CONNECT</a></li>
+    </ul>
+    
 
-    <div class="flex flex-col items-center justify-center h-screen text-center relative z-10">
-        <!-- my pfp-->
-        <img src="img/mainImg.jpeg" alt="Profile Picture" 
-            class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6">
-        <!-- name -->
-        <h1 class="text-4xl md:text-6xl  text-white" 
-            style="font-family: 'Atkinson Hyperlegible Mono', monospace;">
-            Caleb John Sacdalan 
+    <div id="content" class="flex flex-col items-center justify-center text-center relative z-10 pt-10 transition-all duration-300">
+        <!-- Profile Picture -->
+        <img src="img/mainImg.jpeg" alt="Profile Picture" class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6">
+        <!-- Name -->
+        <h1 class="text-4xl md:text-6xl text-white" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">
+            Caleb John Sacdalan
         </h1>
-
-        <!-- intro -->
-        <h2 class="text-lg w-1/2 mx-auto md:text-xl text-white mt-4"
-            style="font-family: 'Atkinson Hyperlegible Mono', monospace;">
+        <!-- Intro -->
+        <h2 class="text-lg w-1/2 mx-auto md:text-xl text-white mt-4" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">
             Turning ideas into powerful apps! Aspiring Software Engineer specializing in Web & Mobile Development, creating seamless digital experiences.
         </h2>
     </div>
-
     
 
     <!-- Particles.js -->
