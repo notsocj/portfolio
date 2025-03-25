@@ -7,8 +7,65 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileMenu.classList.toggle("hidden");
         content.classList.toggle("mt-48"); // Pushes content down
     });
+    
+    // Projects stack/scatter functionality
+    const projectsContainer = document.getElementById("projects-container");
+    
+    if (projectsContainer) {
+        // Start in stacked mode
+        projectsContainer.classList.add("stacked");
+        
+        // Allow clicking on the stacked cards to scatter them
+        projectsContainer.addEventListener("click", function() {
+            if (projectsContainer.classList.contains("stacked")) {
+                // Scatter the cards when clicked
+                projectsContainer.classList.remove("stacked");
+                projectsContainer.classList.add("scattered");
+                
+                // Enhanced animation for scattering cards
+                const cards = document.querySelectorAll('.project-card');
+                
+                // Add a small "shuffle" animation before scattering
+                cards.forEach((card) => {
+                    card.style.opacity = "0.9";
+                    card.style.transform = "scale(0.95) translateY(-5px)";
+                });
+                
+                // Delay the scatter animation slightly for better visual effect
+                setTimeout(() => {
+                    cards.forEach((card, index) => {
+                        // Set initial state for the scatter animation
+                        card.style.opacity = "0";
+                        card.style.transform = "scale(0.8) translateY(-30px)";
+                        
+                        // Create more varied animations for each card
+                        const randomX = (Math.random() - 0.5) * 60; // More horizontal variation
+                        const randomDelay = Math.random() * 100; // Random delay for more natural movement
+                        const randomDuration = 0.7 + (Math.random() * 0.4); // Random animation duration
+                        const randomEasing = index % 2 === 0 ? 
+                            "cubic-bezier(0.175, 0.885, 0.32, 1.275)" : // Bounce effect
+                            "cubic-bezier(0.34, 1.56, 0.64, 1)"; // Different bounce effect
+                        
+                        // Staggered animations with different timing for each card
+                        setTimeout(() => {
+                            // Animate to final position with custom effect for each card
+                            card.style.transition = `all ${randomDuration}s ${randomEasing}`;
+                            card.style.opacity = "1";
+                            card.style.transform = `translateX(${randomX}px) translateY(0) rotate(${index % 2 === 0 ? '1deg' : '-1deg'})`;
+                            
+                            // Reset to normal transition after the scatter animation completes
+                            setTimeout(() => {
+                                card.style.transition = "all 0.5s ease";
+                                card.style.transform = index % 2 === 0 ? "rotate(1deg)" : "rotate(-1deg)";
+                                card.style.transformOrigin = "center";
+                            }, randomDuration * 1000);
+                        }, index * 250 + randomDelay);
+                    });
+                }, 150);
+            }
+        });
+    }
 });
-
 
 // Initialize particles.js
 particlesJS("particles-js", {
@@ -66,7 +123,6 @@ particlesJS("particles-js", {
     },
     retina_detect: true
 });
-
 
 // Stats.js for Performance Monitoring
 var count_particles, stats, update;

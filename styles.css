@@ -109,7 +109,7 @@ body {
     }
 }
 
-/* Add smooth transitions for project cards */
+/* smooth transitions for projects */
 .max-w-7xl .flex {
     transition: transform 0.3s ease-in-out;
 }
@@ -118,7 +118,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* Make project images pop on hover */
+
 .max-w-7xl img {
     transition: all 0.3s ease;
 }
@@ -132,12 +132,64 @@ body {
 .stacked-cards-container {
     perspective: 1000px;
     padding-top: 20px;
+    position: relative;
+    min-height: 600px; 
+    cursor: pointer;
 }
 
 .project-card {
     position: relative;
     transition: all 0.5s ease;
     transform-style: preserve-3d;
+}
+
+
+.stacked .project-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0.9;
+    transform: translateY(0) rotate(0) !important;
+
+}
+
+/* Updated stacked state styles to handle 3 cards */
+.stacked .project-card:nth-child(1) {
+    z-index: 5;
+    transform: translateY(0) rotate(0deg) !important;
+}
+
+.stacked .project-card:nth-child(2) {
+    z-index: 4;
+    transform: translateY(10px) rotate(2deg) !important;
+}
+
+.stacked .project-card:nth-child(3) {
+    z-index: 3;
+    transform: translateY(20px) rotate(-2deg) !important;
+}
+
+/* Scattered state  */
+.scattered .project-card {
+    position: relative;
+    margin-bottom: 40px;
+    cursor: default; /*  */
+    animation-fill-mode: forwards;
+}
+
+.scattered .project-card:nth-child(odd) {
+    transform: rotate(1deg);
+}
+
+.scattered .project-card:nth-child(even) {
+    transform: rotate(-1deg);
+}
+
+.scattered .project-card:hover {
+    transform: translateY(-10px) rotate(0);
+    z-index: 10;
 }
 
 .project-card:not(:last-child) {
