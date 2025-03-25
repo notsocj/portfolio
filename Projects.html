@@ -62,7 +62,7 @@
 
     <!-- Projects Container -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="stacked-cards-container relative">
+        <div id="projects-container" class="stacked-cards-container stacked">
             <!-- Project 1 -->
             <div class="project-card transform transition-all duration-300 hover:-translate-y-2 mb-12">
                 <div class="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-xl overflow-hidden shadow-2xl">
@@ -120,6 +120,38 @@
                             loading="lazy"
                             class="rounded-[10px] brightness-75 w-full h-auto shadow-xl"
                             src="img/projects_portfolio.png"
+                        />
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3: Botanic -->
+            <div class="project-card transform transition-all duration-300 hover:-translate-y-2">
+                <div class="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-xl overflow-hidden shadow-2xl">
+                    <!-- Content Card (Left on medium+ screens, Top on mobile) -->
+                    <div class="z-10 flex flex-col gap-6 w-full md:w-1/2 p-6 md:p-10 bg-[#EFF6FF] dark:bg-[#08203E] rounded-[10px] m-4 shadow-lg order-2 md:order-1">
+                        <p class="text-xl font-bold text-black dark:text-white">Botanic</p>
+                        <p class="text-[#4B5563] dark:text-gray-300">
+                            A comprehensive website about nature with integrated Firebase backend and a custom-trained AI chatbot that answers questions about the natural world, biodiversity, and ecological systems.
+                        </p>
+                    
+                        <!-- Skills Tags -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-1 text-black bg-[#B4D0F0] dark:bg-darkSecondary-300 rounded-[20px]">JavaScript</span>
+                            <span class="px-4 py-1 text-black bg-[#B4D0F0] dark:bg-darkSecondary-300 rounded-[20px]">HTML</span>
+                            <span class="px-4 py-1 text-black bg-[#B4D0F0] dark:bg-darkSecondary-300 rounded-[20px]">Tailwind CSS</span>
+                            <span class="px-4 py-1 text-black bg-[#B4D0F0] dark:bg-darkSecondary-300 rounded-[20px]">Firebase</span>
+                            <span class="px-4 py-1 text-black bg-[#B4D0F0] dark:bg-darkSecondary-300 rounded-[20px]">AI Chatbot</span>
+                        </div>
+                    </div>
+                
+                    <!-- Image Container (Right on medium+ screens, Bottom on mobile) -->
+                    <div class="w-full md:w-1/2 order-1 md:order-2 p-4">
+                        <img 
+                            alt="Screenshot of Botanic Website with AI Chatbot"
+                            loading="lazy"
+                            class="rounded-[10px] brightness-75 w-full h-auto shadow-xl"
+                            src="img/botanic.png"
                         />
                     </div>
                 </div>
