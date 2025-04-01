@@ -20,12 +20,12 @@
 
     <!-- Navigation Bar -->
     <nav class="relative z-50 bg-transparent px-6 py-4 flex items-center justify-between lg:justify-center">
-        <!-- Logo (Left on Mobile, Slightly Centered on Desktop) -->
+        <!-- Logo -->
         <a href="index.html" class="text-white text-lg font-bold flex items-center lg:mr-16">
             <img src="img/CJlogo.png" alt="Logo" class="h-14 md:h-20"> 
         </a>
     
-        <!-- Navigation Links (Centered on Large Screens) -->
+        <!-- Navigation Links -->
         <ul id="nav-menu" class="hidden lg:flex space-x-8">
             <li><a href="aboutme.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">ABOUT ME</a></li>
             <li><a href="techstack.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">TECH STACK</a></li>
@@ -33,7 +33,7 @@
             <li><a href="#connect" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-blue-500">CONNECT</a></li>
         </ul>
     
-        <!-- Hamburger Menu Button (Visible on Mobile) -->
+        <!-- Hamburger Menu Button -->
         <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
             <div class="w-6 h-1 bg-white"></div>
             <div class="w-6 h-1 bg-white"></div>
@@ -51,32 +51,63 @@
 
     
 
-    <!-- About Me Section -->
     <div id="content" class="flex flex-col items-center justify-center text-center relative transition-all duration-300 pt-10 z-10">
         
-        <!-- Profile Picture (Optional) -->
         <img src="img/mainImg.jpeg" alt="Profile Picture" 
             class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6">
 
-        <!-- Title -->
         <h1 class="text-5xl text-white md:text-6xl font-bold uppercase tracking-wide" style="font-family: 'Inter', sans-serif; ">
             About <span class="text-blue-500">Me</span>
         </h1>
 
-        <!-- Description -->
+
             <div class="flex flex-col items-center px-6">
             <p class="text-lg md:text-xl max-w-2xl mt-8 text-gray-300 text-center leading-relaxed tracking-wide" style="font-family: 'Inter', sans-serif;">
                 I am a passionate Information Technology student with a strong love for coding and problem-solving. Technology has always fascinated me, especially how software can shape the way people interact with the digital world. My journey into programming began with curiosity and has since grown into a dedication to building functional and efficient applications. I enjoy learning new technologies, tackling challenges, and continuously improving my skills. Whether it's writing clean code, debugging complex issues, or creating innovative solutions, I thrive in the process of bringing ideas to life.
             </p>
-            <p class="text-lg md:text-xl max-w-2xl mt-6 text-gray-300 text-center leading-relaxed tracking-wide" style="font-family: 'Inter', sans-serif;">
-                I am currently pursuing my Bachelor of Science in Information Technology, with the goal of becoming a mobile application developer. My aspiration is to develop user-friendly, high-performance apps that solve real-world problems and enhance daily experiences. I am particularly interested in cross-platform development, ensuring accessibility across different devices. As I continue my studies, I am committed to expanding my knowledge in software engineering, UI/UX design, and emerging mobile technologies to become a well-rounded developer.
-            </p>
         </div>
-        <!-- Skills Section -->
+
         <div class="mt-6 flex flex-wrap gap-6 justify-center py-16 pb-24">
             <span class="px-6 py-3 bg-blue-500 text-black rounded-lg text-lg font-bold shadow-lg" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">Web Development</span>
             <span class="px-6 py-3 bg-gray-800 text-white rounded-lg text-lg font-bold shadow-lg" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">Mobile App Development</span>
             <span class="px-6 py-3 bg-gray-700 text-white rounded-lg text-lg font-bold shadow-lg" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">UI/UX Design</span>
+        </div>
+
+        <!-- Certificates Section -->
+        <h2 class="text-4xl text-white font-bold mb-8" style="font-family: 'Inter', sans-serif;">Certificates</h2>
+        <div class="w-full max-w-4xl px-6 mb-16">
+            <div class="flex flex-col md:flex-row items-center bg-neutral-700 rounded-xl mb-6 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                <div class="md:w-1/3">
+                    <img src="img/it-specialist-java.png" alt="Certificate 1" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="md:w-2/3 p-6 text-left">
+                    <h3 class="text-2xl text-white font-bold mb-2" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">IT Specialist - Java</h3>
+                    <p class="text-gray-300 mb-2">Issued by Certiport</p>
+                    <p class="text-gray-300 mb-4">Date: February 2025</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center bg-neutral-700 rounded-xl mb-6 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                <div class="md:w-1/3">
+                    <img src="img/Codechum.png" alt="Certificate 2" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="md:w-2/3 p-6 text-left">
+                    <h3 class="text-2xl text-white font-bold mb-2" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">CodeChum National Programming Challenge 6th Placer</h3>
+                    <p class="text-gray-300 mb-2">Issued by: Jemar Jude Maranga</p>
+                    <p class="text-gray-300 mb-4">Date: October 2024</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center bg-neutral-700 rounded-xl mb-6 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                <div class="md:w-1/3">
+                    <img src="img/microsoft-word-badge.png" alt="Certificate 3" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="md:w-2/3 p-6 text-left">
+                    <h3 class="text-2xl text-white font-bold mb-2" style="font-family: 'Atkinson Hyperlegible Mono', monospace;">Microsoft Office Specialist: Word Associate (Office 2019)</h3>
+                    <p class="text-gray-300 mb-2">Issued by: Microsoft</p>
+                    <p class="text-gray-300 mb-4">Date:  March 2024</p>
+                </div>
+            </div>
         </div>
     </div>
 
