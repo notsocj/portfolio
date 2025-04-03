@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caleb John Sacdalan</title>
+
+    <link rel="icon" href="img/CJlogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/CJlogo.png" type="image/x-icon">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-neutral-800">
+    <!-- Particles.js -->
+    <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+    <!-- nav bar-->
+    <nav class="relative z-50 bg-transparent px-6 py-4 flex items-center justify-between lg:justify-center">
+
+        <a href="index.html" class="text-white text-lg font-bold flex items-center lg:mr-16">
+            <img src="img/CJlogo.png" alt="Logo" class="h-14 md:h-20"> 
+        </a>
+    
+
+        <ul id="nav-menu" class="hidden lg:flex space-x-8">
+            <li><a href="aboutme.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">ABOUT ME</a></li>
+            <li><a href="techstack.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">TECH STACK</a></li>
+            <li><a href="Projects.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">PROJECTS</a></li>
+            <li><a href="connect.html" class="text-white px-4 py-2 rounded-lg border border-blue-500 bg-blue-500 text-black transition duration-300 hover:bg-blue-600">CONNECT</a></li>
+        </ul>
+    
+
+        <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
+            <div class="w-6 h-1 bg-white"></div>
+            <div class="w-6 h-1 bg-white"></div>
+            <div class="w-6 h-1 bg-white"></div>
+        </button>
+    </nav>
+    
+
+    <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-neutral-800 bg-opacity-50 p-6 text-center lg:hidden mb-10">
+        <li class="py-2"><a href="aboutme.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">ABOUT ME</a></li>
+        <li class="py-2"><a href="techstack.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">TECH STACK</a></li>
+        <li class="py-2"><a href="Projects.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">PROJECTS</a></li>
+        <li class="py-2"><a href="connect.html" class="text-white px-6 py-3 border border-blue-500 bg-blue-500 text-black rounded-lg hover:bg-blue-600">CONNECT</a></li>
+    </ul>
+
+    <div id="content" class="flex flex-col items-center justify-center text-center transition-all duration-300 relative pt-10 z-10 px-4">
+        <h1 class="text-5xl text-white md:text-6xl font-bold uppercase tracking-wide" style="font-family: 'Inter', sans-serif; ">
+            CONN<span class="text-blue-500">ECT</span>
+        </h1>
+        <h2 class="text-lg md:w-3/4 lg:w-1/2 mx-auto md:text-xl text-white mt-6 mb-12 text-center leading-relaxed tracking-wide"
+            style="font-family: 'Atkinson Hyperlegible Mono', monospace;">
+            Let's collaborate! Reach out through social media or drop me a message using the form below.
+        </h2>
+        
+
+        <div class="w-full max-w-4xl mx-auto mb-16">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-24">
+
+                <a href="https://github.com/notsocj" target="_blank" rel="noopener noreferrer" 
+                   class="flex flex-col items-center transition-transform duration-300 hover:scale-110">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-lg mb-4">
+                        <i class="fab fa-github text-5xl text-black"></i>
+                    </div>
+                    <span class="text-white text-xl font-medium">GitHub</span>
+                </a>
+                
+
+                <a href="https://www.linkedin.com/in/caleb-john-sacdalan-82ab6a29b" target="_blank" rel="noopener noreferrer"
+                   class="flex flex-col items-center transition-transform duration-300 hover:scale-110">
+                    <div class="w-24 h-24 rounded-full bg-blue-600 flex items-center justify-center shadow-lg mb-4">
+                        <i class="fab fa-linkedin-in text-5xl text-white"></i>
+                    </div>
+                    <span class="text-white text-xl font-medium">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+        
+
+        <div class="w-full max-w-2xl mx-auto bg-neutral-700 rounded-xl p-8 shadow-2xl mb-20">
+            <h3 class="text-2xl text-white font-bold mb-6">Send Me a Message</h3>
+            
+
+            <form action="https://formspree.io/f/xwplrozo" method="POST" class="space-y-6">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="w-full md:w-1/2">
+                        <label for="name" class="block text-left text-white mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-3 rounded-lg bg-neutral-800 text-white border border-neutral-600 focus:border-blue-500 focus:outline-none">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <label for="email" class="block text-left text-white mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 rounded-lg bg-neutral-800 text-white border border-neutral-600 focus:border-blue-500 focus:outline-none">
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="subject" class="block text-left text-white mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" required
+                           class="w-full px-4 py-3 rounded-lg bg-neutral-800 text-white border border-neutral-600 focus:border-blue-500 focus:outline-none">
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-left text-white mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" required
+                              class="w-full px-4 py-3 rounded-lg bg-neutral-800 text-white border border-neutral-600 focus:border-blue-500 focus:outline-none resize-none"></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit" 
+                            class="w-full md:w-auto px-8 py-3 bg-blue-500 text-black font-bold rounded-lg transition duration-300 hover:bg-blue-600 transform hover:-translate-y-1">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
