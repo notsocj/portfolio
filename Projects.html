@@ -29,9 +29,9 @@
     
 
         <ul id="nav-menu" class="hidden lg:flex space-x-8">
-            <li><a href="aboutme.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">ABOUT ME</a></li>
-            <li><a href="techstack.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">TECH STACK</a></li>
-            <li><a href="Projects.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">PROJECTS</a></li>
+            <li><a href="about-me.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">ABOUT ME</a></li>
+            <li><a href="tech-stack.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">TECH STACK</a></li>
+            <li><a href="projects.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-white hover:text-black">PROJECTS</a></li>
             <li><a href="connect.html" class="text-white px-4 py-2 rounded-lg border border-white transition duration-300 hover:bg-blue-500">CONNECT</a></li>
         </ul>
 
@@ -42,10 +42,10 @@
         </button>
     </nav>
 
-    <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-neutral-800 bg-opacity-50 p-6 text-center lg:hidden mb-10">
-        <li class="py-2"><a href="aboutme.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">ABOUT ME</a></li>
-        <li class="py-2"><a href="techstack.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">TECH STACK</a></li>
-        <li class="py-2"><a href="Projects.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">PROJECTS</a></li>
+    <ul id="mobile-menu" class="hidden flex flex-col space-y-4 bg-neutral-800 p-6 text-center lg:hidden mb-10">
+        <li class="py-2"><a href="about-me.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">ABOUT ME</a></li>
+        <li class="py-2"><a href="tech-stack.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">TECH STACK</a></li>
+        <li class="py-2"><a href="projects.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">PROJECTS</a></li>
         <li class="py-2"><a href="connect.html" class="text-white px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">CONNECT</a></li>
     </ul>
 
@@ -59,10 +59,8 @@
         </h2>
     </div>
 
-    <!-- projects stacked -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div id="projects-container" class="stacked-cards-container stacked">
-            <!-- proj 1 -->
+        <div id="projects-container" class="space-y-12">
             <div class="project-card transform transition-all duration-300 hover:-translate-y-2 mb-12">
                 <div class="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-xl overflow-hidden shadow-2xl">
 
@@ -92,7 +90,6 @@
                 </div>
             </div>
             
-            <!-- proj 2-->
             <div class="project-card transform transition-all duration-300 hover:-translate-y-2">
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-xl overflow-hidden shadow-2xl">
 
@@ -112,6 +109,7 @@
                     </div>
                 
 
+
                     <div class="w-full md:w-1/2 p-4">
                         <img 
                             alt="Screenshot of Portfolio Website"
@@ -123,10 +121,8 @@
                 </div>
             </div>
             
-            <!-- proj 3  -->
             <div class="project-card transform transition-all duration-300 hover:-translate-y-2">
                 <div class="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-xl overflow-hidden shadow-2xl">
-                    <!-- Content Card (Left on medium+ screens, Top on mobile) -->
                     <div class="z-10 flex flex-col gap-6 w-full md:w-1/2 p-6 md:p-10 bg-[#EFF6FF] dark:bg-[#08203E] rounded-[10px] m-4 shadow-lg order-2 md:order-1">
                         <p class="text-xl font-bold text-black dark:text-white">Botanic</p>
                         <p class="text-[#4B5563] dark:text-gray-300">
@@ -155,7 +151,6 @@
         </div>
     </div>
 
-    <!-- particles js-->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
     <script src="script.js"></script>

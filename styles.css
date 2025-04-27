@@ -26,7 +26,7 @@
         top: 60px;
         left: 0;
         width: 100%;
-        z-index: 50; /* Ensure it appears above other elements */
+        z-index: 50;
     }
     
     nav ul {
@@ -47,7 +47,6 @@
     }
 }
 
-/* Hide menu button on larger screens */
 @media (min-width: 1025px) {
     .menu-toggle {
         display: none;
@@ -75,41 +74,21 @@ body {
     to { opacity: 0; }
 }
 
-/* Particles.js Background */
 #particles-js {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Ensures it's behind */
+    z-index: 0;
 }
 
-/* Stats.js */
-.count-particles {
-    background: #000022;
-    position: absolute;
-    top: 48px;
-    left: 0;
-    width: 80px;
-    color: #13E8E9;
-    font-size: 0.8em;
-    text-align: left;
-    text-indent: 4px;
-    line-height: 14px;
-    padding-bottom: 2px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-}
-
-/* Project Card Styles */
 @media (max-width: 768px) {
     .project-card {
         flex-direction: column;
     }
 }
 
-/* smooth transitions for projects */
 .max-w-7xl .flex {
     transition: transform 0.3s ease-in-out;
 }
@@ -117,7 +96,6 @@ body {
 .max-w-7xl .flex:hover {
     transform: translateY(-5px);
 }
-
 
 .max-w-7xl img {
     transition: all 0.3s ease;
@@ -128,85 +106,9 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Stacked Cards Design */
-.stacked-cards-container {
-    perspective: 1000px;
-    padding-top: 20px;
-    position: relative;
-    min-height: 600px; 
-    cursor: pointer;
-}
-
 .project-card {
     position: relative;
     transition: all 0.5s ease;
-    transform-style: preserve-3d;
-}
-
-
-.stacked .project-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    opacity: 0.9;
-    transform: translateY(0) rotate(0) !important;
-
-}
-
-/* Updated stacked state styles to handle 3 cards */
-.stacked .project-card:nth-child(1) {
-    z-index: 5;
-    transform: translateY(0) rotate(0deg) !important;
-}
-
-.stacked .project-card:nth-child(2) {
-    z-index: 4;
-    transform: translateY(10px) rotate(2deg) !important;
-}
-
-.stacked .project-card:nth-child(3) {
-    z-index: 3;
-    transform: translateY(20px) rotate(-2deg) !important;
-}
-
-/* Scattered state  */
-.scattered .project-card {
-    position: relative;
-    margin-bottom: 40px;
-    cursor: default; /*  */
-    animation-fill-mode: forwards;
-}
-
-.scattered .project-card:nth-child(odd) {
-    transform: rotate(1deg);
-}
-
-.scattered .project-card:nth-child(even) {
-    transform: rotate(-1deg);
-}
-
-.scattered .project-card:hover {
-    transform: translateY(-10px) rotate(0);
-    z-index: 10;
-}
-
-.project-card:not(:last-child) {
-    margin-bottom: 40px;
-}
-
-.project-card:nth-child(odd) {
-    transform: rotate(1deg);
-}
-
-.project-card:nth-child(even) {
-    transform: rotate(-1deg);
-}
-
-.project-card:hover {
-    transform: translateY(-10px) rotate(0);
-    z-index: 10;
 }
 
 .project-card > div {
@@ -219,12 +121,11 @@ body {
     box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.7);
 }
 
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
 @media (max-width: 768px) {
-    .project-card:nth-child(odd),
-    .project-card:nth-child(even) {
-        transform: rotate(0);
-    }
-    
     .project-card:not(:last-child) {
         margin-bottom: 30px;
     }
